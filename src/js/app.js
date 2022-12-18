@@ -10,11 +10,9 @@ export const sortingRules = ['name', 'level'];
 
 export default function orderByProps(object, rule) {
   let objectKeys = [];
-  const hasOwn = [];
 
   for (const item in object) {
     if (object.hasOwnProperty.call(object, item)) {
-      hasOwn.push(item);
       if (rule.includes(item) === false) {
         objectKeys.push(item);
       }
