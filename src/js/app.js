@@ -12,10 +12,8 @@ export default function orderByProps(object, rule) {
   let objectKeys = [];
 
   for (const item in object) {
-    if (object.hasOwnProperty.call(object, item)) {
-      if (rule.includes(item) === false) {
-        objectKeys.push(item);
-      }
+    if (rule.includes(item) === false) {
+      objectKeys.push(item);
     }
   }
 
